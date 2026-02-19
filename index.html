@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <title>Головна сторінка</title>
+
+    <!-- Підключаємо один спільний CSS -->
+    <link rel="stylesheet" href="./css/style.css">
+</head>
+<body>
+
+    <!-- Місце, куди підвантажиться шапка -->
+    <div id="header" data-include="./components/header.html"></div>
+
+    <!-- Основний вміст сторінки -->
+    <main>
+        <h1>Ласкаво просимо!</h1>
+        <p>Тут розміщується контент головної сторінки.</p>
+    </main>
+
+    <!-- Місце, куди підвантажиться підвал -->
+    <div id="footer" data-include="./components/footer.html"></div>
+
+    <!-- Підключаємо скрипт, який робить «вставки» -->
+    <script src="./js/include.js" defer></script>
+    <!-- Ваші власні скрипти (за потребою) -->
+    <script src="./js/main.js" defer></script>
+</body>
+</html>
