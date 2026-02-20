@@ -1,7 +1,88 @@
 <header class="site-header">
-    <nav class="nav">
-        <a href="/index.html">Головна</a>
-        <a href="/about.html">Про нас</a>
-        <a href="/contact.html">Контакти</a>
+  <div class="container header__inner">
+    <!-- Логотип -->
+    <a href="/" class="logo" aria-label="Пий Шаленій - головна сторінка">
+      Пий Шаленій
+    </a>
+
+    <!-- Бургер-меню для мобільних -->
+    <button class="nav__toggle" 
+            aria-label="Перемкнути меню навігації"
+            aria-expanded="false" 
+            aria-controls="main-nav">
+      <span class="bar"></span>
+      <span class="bar"></span>
+      <span class="bar"></span>
+    </button>
+
+    <!-- Основна навігація -->
+    <nav class="header__nav" id="main-nav">
+      <ul class="nav__list">
+        <li class="nav__item">
+          <a href="#hero" class="nav__link">Головна</a>
+        </li>
+        <li class="nav__item">
+          <a href="#about" class="nav__link">Про нас</a>
+        </li>
+        <li class="nav__item">
+          <a href="#menu" class="nav__link">Меню</a>
+        </li>
+        <!-- <li class="nav__item">
+          <a href="#features" class="nav__link">Переваги</a>
+        </li> -->
+        <!-- <li class="nav__item">
+          <a href="#reviews" class="nav__link">Відгуки</a>
+        </li> -->
+        <li class="nav__item">
+          <a href="#gps-section" class="nav__link">Локації</a>
+        </li>
+        <li class="nav__item">
+          <a href="#contact" class="nav__link">Контакти</a>
+        </li>
+      </ul>
     </nav>
+
+    <!-- Додаткові дії (для десктопу) -->
+    <div class="header__actions">
+      <a href="tel:+380671234567" class="btn btn--secondary">+38 (067) 123-45-67</a>
+    </div>
+  </div>
 </header>
+
+<!-- Мобільне меню (поверх всього) -->
+<div class="mobile-menu" id="mobileMenu">
+  <div class="mobile-menu__content">
+    <button class="mobile-menu__close" aria-label="Закрити меню">×</button>
+    
+    <nav class="mobile-nav">
+      <ul class="mobile-nav__list">
+        <li class="mobile-nav__item">
+          <a href="#hero" class="mobile-nav__link">Головна</a>
+        </li>
+        <li class="mobile-nav__item">
+          <a href="#about" class="mobile-nav__link">Про нас</a>
+        </li>
+        <li class="mobile-nav__item">
+          <a href="#manu" class="mobile-nav__link">Меню</a>
+        </li>
+        <!-- <li class="mobile-nav__item">
+          <a href="#features" class="mobile-nav__link">Переваги</a>
+        </li> -->
+        <!-- <li class="mobile-nav__item">
+          <a href="#reviews" class="mobile-nav__link">Відгуки</a>
+        </li> -->
+        <li class="mobile-nav__item">
+            <a href="#gps-section" class="mobile-nav__link">Локації</a>
+        </li>
+        <li class="mobile-nav__item">
+          <a href="#contact" class="mobile-nav__link">Контакти</a>
+        </li>
+      </ul>
+    </nav>
+    
+    <div class="mobile-menu__actions">
+      <a href="tel:+380671234567" class="btn btn--secondary btn--block">+38 (067) 123-45-67</a>
+    </div>
+  </div>
+</div>
+

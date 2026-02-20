@@ -1,29 +1,325 @@
 <!DOCTYPE html>
 <html lang="uk">
 <head>
-    <meta charset="UTF-8">
-    <title>Головна сторінка</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
 
-    <!-- Підключаємо один спільний CSS -->
-    <link rel="stylesheet" href="./css/style.css">
+  <!-- SEO -->
+  <title>Пий Шаленій – краща мережа кав’ярень у вашому місті</title>
+  <meta name="description" content="Пий Шаленій – свіжообсмажена кава, авторські напої, затишна атмосфера. Знайдіть найближчу кав’ярню та отримайте знижку 10% на перше замовлення!">
+  <meta name="keywords" content="кава, кав'ярня, мережа кав'ярень, Пий Шаленій, замовити каву онлайн, кава в місті">
+  <meta name="robots" content="index,follow">
+  <link rel="canonical" href="https://piyshaleniy.ua/">
+
+  <!-- Open Graph / Social Media -->
+  <meta property="og:title" content="Пий Шаленій – краща мережа кав’ярень">
+  <meta property="og:description" content="Світ справжньої кави в кожному куточку міста. Дізнайтесь про новинки, акції та замовте улюблений напій вже зараз.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://piyshaleniy.ua/">
+  <meta property="og:image" content="https://piyshaleniy.ua/img/og-hero.jpg">
+  <meta property="og:locale" content="uk_UA">
+
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Пий Шаленій – краща мережа кав’ярень">
+  <meta name="twitter:description" content="Справжня кава, незабутні смакові комбінації та швидка доставка. Приєднуйтесь до кавоманів!">
+  <meta name="twitter:image" content="https://piyshaleniy.ua/img/twitter-hero.jpg">
+
+  <!-- Favicon -->
+  <link rel="icon" href="/favicon.ico" type="image/x-icon">
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Pacifico&family=Ubuntu:wght@300;400;500;700&display=swap" rel="stylesheet">
+
+  <!-- Stylesheets -->
+  <link rel="stylesheet" href="./css/reset.css">
+  <link rel="stylesheet" href="./css/style.css">
+  <link rel="stylesheet" href="./css/header.css">
+  
+  <link rel="stylesheet" href="./css/footer.css">
+
+  <!-- Preload important assets -->
+  <link rel="preload" as="image" href="https://piyshaleniy.ua/img/hero.jpg">
+
+  <!-- Structured Data -->
+  <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "CoffeeShop",
+      "name": "Пий Шаленій",
+      "url": "https://piyshaleniy.ua/",
+      "logo": "https://piyshaleniy.ua/img/logo.svg",
+      "image": "https://piyshaleniy.ua/img/hero.jpg",
+      "priceRange": "$$",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "вул. Кавова, 12",
+        "addressLocality": "Київ",
+        "postalCode": "01001",
+        "addressCountry": "UA"
+      },
+      "geo": {
+        "@type": "GeoCoordinates",
+        "latitude": "50.4501",
+        "longitude": "30.5234"
+      },
+      "telephone": "+380(67)123-45-67",
+      "openingHoursSpecification": [
+        {
+          "@type": "OpeningHoursSpecification",
+          "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"],
+          "opens": "08:00",
+          "closes": "22:00"
+        },
+        {
+          "@type": "OpeningHoursSpecification",
+          "dayOfWeek": ["Saturday", "Sunday"],
+          "opens": "09:00",
+          "closes": "23:00"
+        }
+      ],
+      "sameAs": [
+        "https://www.facebook.com/piyshaleniy",
+        "https://www.instagram.com/piyshaleniy",
+        "https://t.me/piyshaleniy"
+      ]
+    }
+  </script>
 </head>
+
 <body>
+  <!-- Header -->
+  <div id="header" data-include="./components/header.html"></div>
 
-    <!-- Місце, куди підвантажиться шапка -->
-    <div id="header" data-include="./components/header.html"></div>
+  <!-- Hero Section -->
+  <section id="hero" class="hero">
+    <div class="hero__content container">
+      <h1 class="hero__title">
+        Пий Шаленій<span class="hero__accent hidden">краща кава у місті</span>
+      </h1>
+      <p class="hero__subtitle">Кава, що заряджає!</p>
 
-    <!-- Основний вміст сторінки -->
-    <main>
-        <h1>Ласкаво просимо!</h1>
-        <p>Тут розміщується контент головної сторінки.</p>
+      <!-- *** Новий блок з двома кнопками *** -->
+      <div class="hero__actions">
+        <a href="#about" class="hero__more">Про нас</a>
+          <a href="#menu" class="hero__more">Наше меню</a>
+          <a href="#gps-section" class="hero__btn">Знайти кав’ярню</a>
+      </div>
+    </div>
+
+    <!-- Стрілка‑скрол вниз -->
+    <a href="#main-content" class="scroll-down" aria-label="Прокрутити далі"></a>
+    </section>
+
+    <!-- Main Content -->
+    <main id="main-content">
+        <section id="about" class="about">
+            <div class="container about__container">
+
+                <div class="about__text">
+                <h2 class="about__title">Про нас</h2>
+
+                <p class="about__lead">
+                    Мережа кав'ярень швидкої кави, створена для тих,
+                    хто цінує смак, аромат і якість у кожному ковтку.
+                </p>
+
+                <p>
+                    Ми працюємо лише з ретельно відібраними зернами,
+                    обсмаженими до ідеального балансу насиченості та аромату.
+                    Наша мета — зробити вашу кавову паузу особливим моментом дня.
+                </p>
+
+                <p>
+                    Швидкість обслуговування, стабільна якість і тепла атмосфера —
+                    це те, що робить нас місцем, куди хочеться повертатися знову.
+                </p>
+
+                <div class="about__features">
+                    Якісні зерна • Швидкий сервіс • Доступні ціни
+                </div>
+
+                <a href="#menu" class="hero__more">Переглянути меню</a>
+                </div>
+
+                <div class="about__image">
+                <img src="img\coffee-cup.png" alt="Чашка кави">
+                </div>
+
+            </div>
+        </section>
+
+
+        <section id="menu" class="menu">
+            <div class="container">
+
+                <h2 class="menu__title">Наше меню</h2>
+
+                <div class="menu__filters" id="filters"></div>
+
+                <div class="menu__grid" id="grid"></div>
+
+                <div class="menu__actions">
+                <button class="hero__more" id="moreBtn">Показати більше</button>
+                </div>
+
+            </div>
+        </section>
+
+
+        <section class="locations" id="gps-section">
+
+  <div class="container">
+    <h2 class="title reveal">Наші локації</h2>
+
+    <div class="grid">
+
+      <div class="card reveal" data-lat="50.40252621869316" data-lng="30.517085838337866">
+        <div class="spotlight"></div>
+        <img src="img/location1.jpg">
+
+        <div class="content">
+          <h3>Кавʼярня Голосіїв</h3>
+          <p>Голосіївський проспект, 17а, Київ, 02000</p>
+          <button class="magnetic routeBtn">Маршрут</button>
+        </div>
+      </div>
+
+      <div class="card reveal" data-lat="50.37659173575179" data-lng="30.45458438894326">
+        <div class="spotlight"></div>
+        <img src="img/location2.jpg">
+
+        <div class="content">
+          <h3>Кавʼярня Теремки</h3>
+          <p>Василя Касіяна, 10Б, Київ, 03040</p>
+          <button class="magnetic routeBtn">Маршрут</button>
+        </div>
+      </div>
+
+      <div class="card reveal" data-lat="50.39905411840777" data-lng="30.502842677998125">
+        <div class="spotlight"></div>
+        <img src="img/location3.jpg">
+
+        <div class="content">
+          <h3>Кавʼярня Деміївська</h3>
+          <p>Деміївська, 53, Київ, 02000</p>
+          <button class="magnetic routeBtn">Маршрут</button>
+        </div>
+      </div>
+
+    </div>
+
+    <!-- REAL GOOGLE MAP -->
+    <div class="mapBox reveal">
+        <iframe src="https://www.google.com/maps/d/embed?mid=1dHe6JHPvEf1yEhJ9evUIRwL7RFruLpY&ehbc=2E312F&noprof=1" width="100%"
+        height="380"
+        style="border:0;border-radius:20px;margin-top:60px;"
+        loading="lazy"></iframe>
+    </div>
+
+  </div>
+
+</section>
+
+
+<section id="contact" class="contact">
+  <div class="container">
+
+    <h2 class="sectionTitle">Зв’язок з нами</h2>
+
+    <div class="contact__grid">
+
+      <!-- INFO -->
+      <div class="contactCard">
+        <h3>Контакти</h3>
+
+        <div class="contactItem">
+          <span>📞</span>
+          <a href="tel:+380671234567">+38 067 123 45 67</a>
+        </div>
+
+        <div class="contactItem">
+          <span>✉</span>
+          <a href="mailto:coffee@brand.ua">coffee@brand.ua</a>
+        </div>
+
+        <div class="contactItem">
+          <span>📍</span>
+          <p>Київ, Україна</p>
+        </div>
+
+        <div class="socials">
+          <a href="#">Instagram</a>
+          <a href="#">Facebook</a>
+          <a href="#">TikTok</a>
+        </div>
+      </div>
+
+      <!-- INSTAGRAM -->
+      <div class="instaCard">
+        <h3>Приєднуйся до нас</h3>
+        <p class="instaSub">@coffee.brand</p>
+
+        <div class="instaGrid">
+          <img src="img/insta1.jpg">
+          <img src="img/insta2.jpg">
+          <img src="img/insta3.jpg">
+          <img src="img/insta4.jpg">
+          <img src="img/insta5.jpg">
+          <img src="img/insta6.jpg">
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+
+<section class="reviews">
+  <div class="container">
+
+    <h2 class="sectionTitle">Відгуки гостей</h2>
+
+    <div class="reviewsSlider" id="reviewsSlider">
+
+      <div class="review active">
+        <p>Найкраща кава яку я пив. Атмосфера топ.</p>
+        <span>— Андрій</span>
+      </div>
+
+      <div class="review">
+        <p>Дуже швидко, дуже смачно. Рекомендую.</p>
+        <span>— Марія</span>
+      </div>
+
+      <div class="review">
+        <p>Місце куди хочеться повертатись.</p>
+        <span>— Олексій</span>
+      </div>
+
+    </div>
+
+  </div>
+</section>
+
+
+        <!-- MODAL -->
+        <div class="menuModal" id="menuModal">
+            <div class="menuModal__content" id="modalContent"></div>
+        </div>
     </main>
 
-    <!-- Місце, куди підвантажиться підвал -->
+
     <div id="footer" data-include="./components/footer.html"></div>
 
-    <!-- Підключаємо скрипт, який робить «вставки» -->
-    <script src="./js/include.js" defer></script>
-    <!-- Ваші власні скрипти (за потребою) -->
-    <script src="./js/main.js" defer></script>
+  <!-- Scripts -->
+  <script src="./js/include.js" defer></script>
+  <script src="./js/header.js" defer></script>
+  <script src="./js/footer.js" defer></script>
+
+  <script src="./js/main.js" defer></script>
 </body>
 </html>
