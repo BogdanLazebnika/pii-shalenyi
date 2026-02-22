@@ -1,0 +1,150 @@
+/*--- 01. Змінні ----------------------------------------------------*/
+:root{
+  --font-primary:'Ubuntu',sans-serif;
+  --font-display:'Pacifico',cursive;
+  --color-primary:#F8C624;
+  --color-primary-dark:#C99413;
+  --color-bg:#111;
+  --color-text:#fff;
+  --color-overlay:rgba(22,14,2,.55);
+  --color-btn-text:#212121;
+  --color-neon:rgba(255,215,0,.8);
+  --transition-fast:.2s;
+  --transition-medium:.35s;
+  --hero-bg:url("../img/pexels-indraprojectsofficial.webp");
+}
+
+/*--- 02. Глобальні -------------------------------------------------*/
+*,*::before,*::after{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{
+  margin:0;
+  font-family:var(--font-primary);
+  background:var(--color-bg);
+  color:var(--color-text);
+  line-height:1.5;
+}
+
+/*--- 03. Hero ------------------------------------------------------*/
+.hero{
+  position:relative;
+  min-height:100vh;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  text-align:center;
+  background:var(--hero-bg)center/cover no-repeat fixed;
+  overflow:hidden;
+}
+.hero::before{
+  content:"";
+  inset:0;
+  position:absolute;
+  background:var(--color-overlay);
+  z-index:1;
+}
+.hero__content{position:relative;z-index:2}
+.hero__title{
+  font-family:var(--font-display);
+  font-weight:900;
+  font-size:clamp(3rem,10vw,8rem);
+  line-height:1.1;
+  margin:0;
+  background:linear-gradient(135deg,var(--color-primary),var(--color-primary-dark));
+  -webkit-background-clip:text;
+  -webkit-text-fill-color:transparent;
+  animation:slideInFromTop var(--transition-medium) ease-out forwards;
+}
+.hero__subtitle{
+  font-size:clamp(1.1rem,3vw,2rem);
+  margin:1.5rem 0 2rem;
+  opacity:0;
+  animation:fadeInUp var(--transition-medium) .2s ease-out forwards;
+}
+.hero__actions{display:flex;flex-wrap:wrap;gap:1rem;justify-content:center;margin-top:2rem}
+.hero__more,.hero__btn{
+  display:inline-flex;
+  align-items:center;
+  justify-content:center;
+  padding:clamp(.75rem,1.5vw,1.2rem) clamp(1.5rem,3vw,2.5rem);
+  font-weight:600;
+  font-size:clamp(1rem,2.5vw,1.6rem);
+  text-decoration:none;
+  border-radius:.5rem;
+  cursor:pointer;
+  transition:all var(--transition-fast) ease;
+  position:relative;
+  overflow:hidden;
+}
+.hero__more{
+  color:var(--color-primary);
+  background:rgba(255,255,255,.08);
+  border:2px solid var(--color-primary);
+  backdrop-filter:blur(4px);
+}
+.hero__more:hover,
+.hero__more:focus-visible{
+  background:var(--color-primary);
+  color:var(--color-btn-text);
+  transform:translateY(-2px) scale(1.02);
+  box-shadow:0 4px 6px rgba(0,0,0,.12),0 0 12px var(--color-primary);
+}
+.hero__btn{
+  color:var(--color-btn-text);
+  background:linear-gradient(135deg,var(--color-primary),#FFDB4F);
+  box-shadow:0 4px 6px rgba(0,0,0,.12),0 0 12px var(--color-neon);
+}
+.hero__btn:hover{
+  background:linear-gradient(135deg,#FFDB4F,#FFE082);
+  transform:translateY(-3px) scale(1.02);
+  box-shadow:0 8px 12px rgba(0,0,0,.15),0 0 20px var(--color-neon);
+}
+.hero__btn:active{
+  background:linear-gradient(135deg,#E6AE1F,#FFC107);
+  transform:translateY(1px) scale(.98);
+}
+.scroll-down{
+  position:absolute;
+  bottom:2rem;
+  left:50%;
+  transform:translateX(-50%);
+  width:24px;height:36px;
+  border:2px solid var(--color-primary);
+  border-radius:12px;
+  opacity:.8;
+  animation:bounce 2s infinite;
+  cursor:pointer;
+}
+.scroll-down::before{
+  content:"";
+  position:absolute;
+  top:8px;left:50%;
+  width:8px;height:8px;
+  background:var(--color-primary);
+  border-radius:50%;
+  transform:translateX(-50%);
+  animation:moveDown 2s infinite;
+}
+
+/*--- 04. Анімації -------------------------------------------------*/
+@keyframes slideInFromTop{0%{opacity:0;transform:translateY(-30px)}100%{opacity:1;transform:none}}
+@keyframes fadeInUp{0%{opacity:0;transform:translateY(20px)}100%{opacity:1;transform:none}}
+@keyframes bounce{0%,20%,50%,80%,100%{transform:translateY(0)}40%{transform:translateY(-10px)}60%{transform:translateY(-5px)}}
+@keyframes moveDown{0%{top:8px;opacity:.8}50%{top:16px;opacity:.2}100%{top:24px;opacity:.8}}
+
+/*--- 05. Адаптив ---------------------------------------------------*/
+@media(max-width:768px){
+  .hero__title{font-size:clamp(2.5rem,12vw,6rem)}
+  .hero__subtitle{font-size:clamp(1rem,4vw,1.5rem)}
+}
+@media(max-width:480px){
+  .hero__title{font-size:clamp(2rem,14vw,5rem)}
+}
+
+/*--- 06. Доступність -----------------------------------------------*/
+@media (prefers-reduced-motion:reduce){
+  *,*::before,*::after{animation-duration:.001ms !important;transition-duration:.001ms !important}
+}
+
+/*=== Далі – ваші залишкові стилі (about, menu, locations, contact, reviews, footer)===*/
+/* (скопіюйте їх без змін, лише видаліть зайві коментарі, якщо потрібно) */
