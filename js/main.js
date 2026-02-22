@@ -3,191 +3,262 @@
    ========================================================= */
 
 const menuItems = [
+
+/* ---------- ЧОРНА КАВА ---------- */
 {
-  name:"Лате",
-  category:"Класика",
-  price:"65 грн",
-  desc:"Ніжна кава з молоком",
-  img:"img/latte.webp",
-  badge:"HIT"
+  name:"Еспресо",
+  category:"Чорна кава",
+  price:"24 грн",
+  desc:"Класичний концентрований кавовий шот",
+  img:"img/menu/espresso.webp"
+},
+{
+  name:"Допіо",
+  category:"Чорна кава",
+  price:"38 грн",
+  desc:"Подвійна порція еспресо",
+  img:"img/menu/doppio.webp"
+},
+{
+  name:"Американо",
+  category:"Чорна кава",
+  price:"M 27 грн • L 38 грн",
+  desc:"Еспресо з додаванням гарячої води",
+  img:"img/menu/americano.webp"
+},
+
+/* ---------- КАВА З МОЛОКОМ ---------- */
+{
+  name:"Флет вайт",
+  category:"Кава з молоком",
+  price:"48 грн",
+  desc:"Насичена кава з ніжною молочною текстурою",
+  img:"img/menu/flatwhite.webp"
 },
 {
   name:"Капучино",
-  category:"Класика",
-  price:"60 грн",
-  desc:"Класичний баланс смаку",
-  img:"img/cappuccino.webp"
-},
-{
-  name:"Матча лате",
-  category:"Авторські",
-  price:"85 грн",
-  desc:"Японський чай преміум",
-  img:"img/matcha.webp",
-  badge:"NEW"
-},
-{
-  name:"Фрапе",
-  category:"Холодні",
-  price:"80 грн",
-  desc:"Освіжаюча холодна кава",
-  img:"img/frappe.webp"
-},
-{
-  name:"Круасан",
-  category:"Десерти",
-  price:"85 грн",
-  desc:"Французька випічка",
-  img:"img/croissant.webp"
+  category:"Кава з молоком",
+  price:"M 35 грн • L 45 грн • XL 55 грн",
+  desc:"Еспресо з молоком та пінкою",
+  img:"img/menu/cappuccino.webp"
 },
 {
   name:"Лате",
-  category:"Класика",
-  price:"65 грн",
-  desc:"Ніжна кава з молоком",
-  img:"img/latte.webp",
-  badge:"HIT"
+  category:"Кава з молоком",
+  price:"M 35 грн • L 45 грн • XL 55 грн",
+  desc:"М'яка кава",
+  img:"img/menu/latte.webp"
 },
 {
-  name:"Капучино",
-  category:"Класика",
-  price:"60 грн",
-  desc:"Класичний баланс смаку",
-  img:"img/cappuccino.webp"
+  name:"Раф",
+  category:"Кава з молоком",
+  price:"M 45 грн • L 55 грн • XL 65 грн",
+  desc:"Кремова кава з ніжною текстурою",
+  img:"img/menu/raf.webp"
 },
 {
-  name:"Матча лате",
-  category:"Авторські",
-  price:"85 грн",
-  desc:"Японський чай преміум",
-  img:"img/matcha.webp",
-  badge:"NEW"
+  name:"Американо з молоком",
+  category:"Кава з молоком",
+  price:"M 30 грн • L 45 грн",
+  desc:"Американо з додаванням молока",
+  img:"img/menu/americano-milk.webp"
 },
 {
-  name:"Фрапе",
+  name:"Капуоранж",
+  category:"Кава з молоком",
+  price:"M 50 грн • L 60 грн",
+  desc:"Кава з апельсиновими нотами",
+  img:"img/menu/capuorange.webp"
+},
+{
+  name:"Мокко",
+  category:"Кава з молоком",
+  price:"M 43 грн • L 55 грн • XL 65 грн",
+  desc:"Кава з шоколадом та молоком",
+  img:"img/menu/mocha.webp"
+},
+{
+  name:"Кава по-віденськи",
+  category:"Кава з молоком",
+  price:"40 грн",
+  desc:"Кава з вершками",
+  img:"img/menu/vienna.webp"
+},
+
+/* ---------- НЕ КАВА ---------- */
+{
+  name:"Матча-лате",
+  category:"Не кава",
+  price:"M 55 грн • L 65 грн",
+  desc:"Японський чай з молоком",
+  img:"img/menu/matcha.webp"
+},
+{
+  name:"Какао класичний",
+  category:"Не кава",
+  price:"M 40 грн • L 45 грн • XL 55 грн",
+  desc:"Гарячий шоколадний напій",
+  img:"img/menu/cocoa.webp"
+},
+{
+  name:"Шоколад",
+  category:"Не кава",
+  price:"M 40 грн • L 50 грн",
+  desc:"Густий шоколадний напій",
+  img:"img/menu/hotchocolate.webp"
+},
+{
+  name:"Чай натуральний",
+  category:"Не кава",
+  price:"M 45 грн • L 60 грн",
+  desc:"Натуральний заварний чай",
+  img:"img/menu/tea.webp"
+},
+{
+  name:"Чай листовий",
+  category:"Не кава",
+  price:"23 грн",
+  desc:"Класичний листовий чай",
+  img:"img/menu/leaftea.webp"
+},
+
+/* ---------- COLD MENU ---------- */
+{
+  name:"Espresso tonic",
   category:"Холодні",
-  price:"80 грн",
-  desc:"Освіжаюча холодна кава",
-  img:"img/frappe.webp"
+  price:"L 65 грн • XL 85 грн",
+  desc:"Еспресо з тоніком та льодом",
+  img:"img/menu/espresso-tonic.webp"
 },
 {
-  name:"Круасан",
-  category:"Десерти",
-  price:"85 грн",
-  desc:"Французька випічка",
-  img:"img/croissant.webp"
-},
-{
-  name:"Лате",
-  category:"Класика",
-  price:"65 грн",
-  desc:"Ніжна кава з молоком",
-  img:"img/latte.webp",
-  badge:"HIT"
-},
-{
-  name:"Капучино",
-  category:"Класика",
-  price:"60 грн",
-  desc:"Класичний баланс смаку",
-  img:"img/cappuccino.webp"
-},
-{
-  name:"Матча лате",
-  category:"Авторські",
-  price:"85 грн",
-  desc:"Японський чай преміум",
-  img:"img/matcha.webp",
-  badge:"NEW"
-},
-{
-  name:"Фрапе",
+  name:"BAMBL",
   category:"Холодні",
-  price:"80 грн",
-  desc:"Освіжаюча холодна кава",
-  img:"img/frappe.webp"
+  price:"L 60 грн • XL 80 грн",
+  desc:"Освіжаючий кавовий напій",
+  img:"img/menu/bambl.webp"
 },
 {
-  name:"Круасан",
-  category:"Десерти",
-  price:"85 грн",
-  desc:"Французька випічка",
-  img:"img/croissant.webp"
-},
-{
-  name:"Лате",
-  category:"Класика",
-  price:"65 грн",
-  desc:"Ніжна кава з молоком",
-  img:"img/latte.webp",
-  badge:"HIT"
-},
-{
-  name:"Капучино",
-  category:"Класика",
-  price:"60 грн",
-  desc:"Класичний баланс смаку",
-  img:"img/cappuccino.webp"
-},
-{
-  name:"Матча лате",
-  category:"Авторські",
-  price:"85 грн",
-  desc:"Японський чай преміум",
-  img:"img/matcha.webp",
-  badge:"NEW"
-},
-{
-  name:"Фрапе",
+  name:"ICE latte",
   category:"Холодні",
-  price:"80 грн",
-  desc:"Освіжаюча холодна кава",
-  img:"img/frappe.webp"
+  price:"L 60 грн • XL 70 грн",
+  desc:"Холодний лате з льодом",
+  img:"img/menu/ice-latte.webp"
 },
 {
-  name:"Круасан",
-  category:"Десерти",
-  price:"85 грн",
-  desc:"Французька випічка",
-  img:"img/croissant.webp"
-},
-{
-  name:"Лате",
-  category:"Класика",
-  price:"65 грн",
-  desc:"Ніжна кава з молоком",
-  img:"img/latte.webp",
-  badge:"HIT"
-},
-{
-  name:"Капучино",
-  category:"Класика",
-  price:"60 грн",
-  desc:"Класичний баланс смаку",
-  img:"img/cappuccino.webp"
-},
-{
-  name:"Матча лате",
-  category:"Авторські",
-  price:"85 грн",
-  desc:"Японський чай преміум",
-  img:"img/matcha.webp",
-  badge:"NEW"
-},
-{
-  name:"Фрапе",
+  name:"ICE Raf",
   category:"Холодні",
-  price:"80 грн",
-  desc:"Освіжаюча холодна кава",
-  img:"img/frappe.webp"
+  price:"L 60 грн • XL 80 грн",
+  desc:"Холодний кремовий раф",
+  img:"img/menu/ice-raf.webp"
 },
 {
-  name:"Круасан",
-  category:"Десерти",
-  price:"85 грн",
-  desc:"Французька випічка",
-  img:"img/croissant.webp"
+  name:"Frape",
+  category:"Холодні",
+  price:"L 60 грн • XL 80 грн",
+  desc:"Холодна збита кава",
+  img:"img/menu/frappe.webp"
+},
+{
+  name:"Lemonad classic",
+  category:"Холодні",
+  price:"L 55 грн • XL 70 грн",
+  desc:"Класичний лимонад",
+  img:"img/menu/lemonade.webp"
+},
+{
+  name:"Mojito",
+  category:"Холодні",
+  price:"L 70 грн • XL 80 грн",
+  desc:"Освіжаючий м'ятний напій",
+  img:"img/menu/mojito.webp"
+},
+{
+  name:"ICE Cocoa",
+  category:"Холодні",
+  price:"L 60 грн • XL 70 грн",
+  desc:"Холодне какао",
+  img:"img/menu/ice-cocoa.webp"
+},
+{
+  name:"Sangria",
+  category:"Холодні",
+  price:"L 80 грн • XL 100 грн",
+  desc:"Фруктовий холодний напій",
+  img:"img/menu/sangria.webp"
+},
+
+/* ---------- ДОДАТКИ ---------- */
+{
+  name:"Арабіка",
+  category:"Додатки",
+  price:"8 грн",
+  desc:"Додатковий шот",
+  img:"img/menu/add.webp"
+},
+{
+  name:"Лимон",
+  category:"Додатки",
+  price:"8 грн",
+  desc:"Скибка лимона",
+  img:"img/menu/add.webp"
+},
+{
+  name:"Згущене молоко",
+  category:"Додатки",
+  price:"M 10 грн • L 15 грн",
+  desc:"Додаткове згущене молоко",
+  img:"img/menu/add.webp"
+},
+{
+  name:"Мед",
+  category:"Додатки",
+  price:"15 грн",
+  desc:"Натуральний мед",
+  img:"img/menu/add.webp"
+},
+{
+  name:"Сироп",
+  category:"Додатки",
+  price:"8 грн",
+  desc:"Смаковий сироп",
+  img:"img/menu/add.webp"
+},
+{
+  name:"Кава без кофеїну",
+  category:"Додатки",
+  price:"10 грн",
+  desc:"Decaf",
+  img:"img/menu/add.webp"
+},
+{
+  name:"Маршмелоу",
+  category:"Додатки",
+  price:"15 грн",
+  desc:"Міні маршмелоу",
+  img:"img/menu/add.webp"
+},
+{
+  name:"Безлактозне молоко",
+  category:"Додатки",
+  price:"M 10 грн • L 15 грн",
+  desc:"Альтернатива молоку",
+  img:"img/menu/add.webp"
+},
+{
+  name:"Рослинне молоко",
+  category:"Додатки",
+  price:"M 30 грн • L 35 грн • XL 40 грн",
+  desc:"Альтернативне молоко",
+  img:"img/menu/add.webp"
+},
+{
+  name:"Додаткове Еспресо",
+  category:"Додатки",
+  price:"15 грн",
+  desc:"Додатковий шот еспресо",
+  img:"img/menu/add.webp"
 }
+
 ];
 
 
@@ -239,8 +310,8 @@ function render(){
 
   const show = data.slice(0,visible);
 
-  grid.innerHTML = show.map(item=>`
-    <div class="menuCard" onclick='openModal(${JSON.stringify(item)})'>
+  grid.innerHTML = show.map((item,index)=>`
+    <div class="menuCard" data-index="${index}">
 
       ${item.badge ? `<div class="menuCard__badge">${item.badge}</div>`:""}
 
@@ -256,9 +327,16 @@ function render(){
     </div>
   `).join("");
 
+  // ✅ ось тут відкриття модалки
+  document.querySelectorAll(".menuCard").forEach(card=>{
+    card.onclick = () => {
+      const index = card.dataset.index;
+      openModal(show[index]);
+    };
+  });
+
   moreBtn.style.display = visible>=data.length ? "none":"inline-flex";
 }
-
 render();
 
 

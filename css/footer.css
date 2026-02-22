@@ -7,21 +7,13 @@
 }
 
 /* subtle glow background */
-.footer::before {
-  content: "";
-  position: absolute;
-  width: 600px;
-  height: 600px;
-  background: radial-gradient(circle, rgba(255,180,80,0.08), transparent 70%);
-  top: -200px;
-  left: -200px;
-}
+
 
 .footer-container {
   max-width: 1300px;
   margin: auto;
   display: grid;
-  grid-template-columns: 2fr 1fr 1fr 1.5fr;
+  grid-template-columns: 2fr 1fr 1fr;
   gap: 80px;
   padding: 0 40px 80px;
 }
@@ -111,7 +103,9 @@
   font-size: 14px;
 }
 
-.dev-name {
+.dev-name a{
+  text-decoration: none;
+  
   color: #f5b85c;
   font-weight: 600;
 }

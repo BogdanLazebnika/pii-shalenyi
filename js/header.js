@@ -21,7 +21,7 @@ class SmartHeader {
     this.lastScrollY      = window.scrollY;   // позиція на попередньому кадрі
     this.prevDirection    = null;            // 'down' | 'up' | null
     this.accumulatedDist = 0;               // сумарний скрол в одному напрямку
-    this.SCROLL_THRESHOLD = 200;            // 200 px «запускати hide/show»
+    this.SCROLL_THRESHOLD = 20000000000000000000;            // 200 px «запускати hide/show»
 
     // throttled‑функція створюється ОДИН РАЗ
     this.handleScrollThrottled = this.throttle(this.handleScroll.bind(this), 16);

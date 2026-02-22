@@ -652,6 +652,9 @@ html { scroll-behavior: smooth; }
 
 
 
+
+
+
 body {
   background:#000;
   font-family:Inter, sans-serif;
@@ -839,7 +842,8 @@ button{
   align-items:center;
 }
 
-.contactItem a{
+.contactItem a,
+.instaCard a{
   color:white;
   text-decoration:none;
 }
